@@ -9,10 +9,7 @@ import Base from '../layouts/Base.astro';
     <li>Computer architecture and the full stack from transistors up.</li>
     <li>Accelerated computing, custom accelerators, and the ML workloads driving them.</li>
     <li>FPGAs and ASICs — RTL to silicon.</li>
-    <li>Quantum hardware (long-term).</li>
     <li>The semiconductor industry — equipment, foundries, fabless, packaging, supply chain.</li>
-    <li>Quantitative finance, especially the math-heavy end of it.</li>
-    <li>Autonomous systems and Formula 1.</li>
   </ul>
 
   <h2>Currently reading</h2>
@@ -22,6 +19,6 @@ import Base from '../layouts/Base.astro';
 
   <h2>Currently working on</h2>
   <ul>
-    <li>LeNet accelerator — see <a href="./projects/lenet-accelerator/index.html">Projects</a>.</li>
+    <li>LeNet accelerator — see <a href={`${import.meta.env.BASE_URL.replace(/\/?$/, '/')}projects/lenet-accelerator/`}>Projects</a>.</li>
   </ul>
 </Base>

@@ -1,1 +1,19 @@
-[]
+[
+  { "title": "Google Part I: Origins of Search", "podcast": "Acquired", "url": "https://podcasts.apple.com/ca/podcast/acquired/id1050462261?i=1000715075095" },
+  { "title": "Google Part II: Alphabet", "podcast": "Acquired", "url": "https://podcasts.apple.com/ca/podcast/acquired/id1050462261?i=1000723582204" },
+  { "title": "Google Part III: The AI Company", "podcast": "Acquired", "url": "https://podcasts.apple.com/ca/podcast/acquired/id1050462261?i=1000730326283" },
+  { "title": "Costco", "podcast": "Acquired", "url": "https://podcasts.apple.com/ca/podcast/acquired/id1050462261?i=1000625088063" },
+  { "title": "NVIDIA CEO Jensen Huang", "podcast": "Acquired", "url": "https://podcasts.apple.com/ca/podcast/acquired/id1050462261?i=1000631419166" },
+  { "title": "Nvidia Part III: The Dawn of the AI Era (2022–2023)", "podcast": "Acquired", "url": "https://podcasts.apple.com/ca/podcast/acquired/id1050462261?i=1000626913736" },
+  { "title": "Qualcomm", "podcast": "Acquired", "url": "https://podcasts.apple.com/ca/podcast/acquired/id1050462261?i=1000606224375" },
+  { "title": "Amazon.com", "podcast": "Acquired", "url": "https://podcasts.apple.com/ca/podcast/acquired/id1050462261?i=1000606224597" },
+  { "title": "Jensen Huang – TPU competition, why we should sell chips to China, & Nvidia's supply chain moat", "podcast": "Dwarkesh Podcast", "url": "https://podcasts.apple.com/ca/podcast/dwarkesh-podcast/id1516093381?i=1000761582962" },
+  { "title": "Dylan Patel — Deep dive on the 3 big bottlenecks to scaling AI compute", "podcast": "Dwarkesh Podcast", "url": "https://podcasts.apple.com/ca/podcast/dwarkesh-podcast/id1516093381?i=1000755126873" },
+  { "title": "Dario Amodei — \"We are near the end of the exponential\"", "podcast": "Dwarkesh Podcast", "url": "https://podcasts.apple.com/ca/podcast/dwarkesh-podcast/id1516093381?i=1000749621800" },
+  { "title": "Sarah Paine — Why Russia Lost the Cold War", "podcast": "Dwarkesh Podcast", "url": "https://podcasts.apple.com/ca/podcast/dwarkesh-podcast/id1516093381?i=1000742025593" },
+  { "title": "Sarah Paine — How Russia sabotaged China's rise", "podcast": "Dwarkesh Podcast", "url": "https://podcasts.apple.com/ca/podcast/dwarkesh-podcast/id1516093381?i=1000734455820" },
+  { "title": "Ep 2: Domain-specific Accelerators with Dr. Bill Dally, Nvidia", "podcast": "Computer Architecture Podcast", "url": "https://podcasts.apple.com/ca/podcast/computer-architecture-podcast/id1515736114?i=1000495609301" },
+  { "title": "Ep 11: Future of AI Computing and How to Build & Nurture Hardware Teams with Jim Keller, Tenstorrent", "podcast": "Computer Architecture Podcast", "url": "https://podcasts.apple.com/ca/podcast/computer-architecture-podcast/id1515736114?i=1000599482566" },
+  { "title": "Ep 12: 50th Anniversary of SIGARCH Special Episode with Dr. David Patterson, Dr. Norm Jouppi and Dr. Natalie Enright-Jerger", "podcast": "Computer Architecture Podcast", "url": "https://podcasts.apple.com/ca/podcast/computer-architecture-podcast/id1515736114?i=1000616433766" },
+  { "title": "Ep 13: Energy-efficient Algorithm-hardware Co-design with Dr. Vivienne Sze, MIT", "podcast": "Computer Architecture Podcast", "url": "https://podcasts.apple.com/ca/podcast/computer-architecture-podcast/id1515736114?i=1000629423002" }
+]

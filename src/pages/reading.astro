@@ -3,6 +3,8 @@ import Base from '../layouts/Base.astro';
 import BookGrid from '../components/BookGrid.astro';
 import books from '../data/books.json';
 import papers from '../data/papers.json';
+
+const papersBase = `${import.meta.env.BASE_URL.replace(/\/?$/, '/')}papers/`;
 ---
 <Base title="Reading" page="reading">
 
@@ -20,7 +22,7 @@ import papers from '../data/papers.json';
   <ul class="paper-list">
     {papers.map(paper => (
       <li>
-        <a href={`../papers/${paper.pdf}`} target="_blank" rel="noopener">
+        <a href={`${papersBase}${paper.pdf}`} target="_blank" rel="noopener">
           {paper.title}
         </a>
         {' — '}{paper.authors}{paper.year ? `, ${paper.year}` : ''}

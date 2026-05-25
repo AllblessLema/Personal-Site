@@ -7,11 +7,9 @@ interface Props {
 const { title, page } = Astro.props;
 const fullTitle = page ? `${title} — Allbless Lema` : title;
 
-// Compute relative base so all links work with file:// (no server needed).
-// depth 0 = root (index.html), depth 1 = /reading/, depth 2 = /projects/slug/
-const depth = Astro.url.pathname.replace(/\/$/, '').split('/').filter(Boolean).length;
-const base = depth === 0 ? '.' : Array(depth).fill('..').join('/');
-// e.g. depth 0 → '.', depth 1 → '..', depth 2 → '../..'
+// Normalize BASE_URL so it always ends with /
+// Astro 6 omits the trailing slash, e.g. '/Personal-Site' not '/Personal-Site/'
+const b = import.meta.env.BASE_URL.replace(/\/?$/, '/');
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,13 +22,13 @@ const base = depth === 0 ? '.' : Array(depth).fill('..').join('/');
   <div class="wrapper">
     <header class="site-header">
       <div class="header-row">
-        <a href={`${base}/index.html`} class="site-name">Allbless Lema</a>
+        <a href={b} class="site-name">Allbless Lema</a>
         <nav>
-          <a href={`${base}/index.html`} aria-current={page === 'home' ? 'page' : undefined}>Home</a>
-          <a href={`${base}/reading/index.html`} aria-current={page === 'reading' ? 'page' : undefined}>Reading</a>
-          <a href={`${base}/watching/index.html`} aria-current={page === 'watching' ? 'page' : undefined}>Watching</a>
-          <a href={`${base}/listening/index.html`} aria-current={page === 'listening' ? 'page' : undefined}>Listening</a>
-          <a href={`${base}/projects/index.html`} aria-current={page === 'projects' ? 'page' : undefined}>Projects</a>
+          <a href={b} aria-current={page === 'home' ? 'page' : undefined}>Home</a>
+          <a href={`${b}reading/`} aria-current={page === 'reading' ? 'page' : undefined}>Reading</a>
+          <a href={`${b}watching/`} aria-current={page === 'watching' ? 'page' : undefined}>Watching</a>
+          <a href={`${b}listening/`} aria-current={page === 'listening' ? 'page' : undefined}>Listening</a>
+          <a href={`${b}projects/`} aria-current={page === 'projects' ? 'page' : undefined}>Projects</a>
         </nav>
       </div>
       <div class="social-row">

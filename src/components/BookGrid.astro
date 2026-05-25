@@ -3,6 +3,8 @@ interface Book {
   title: string;
   author: string;
   isbn: string;
+  cover_id?: number;
+  cover_url?: string;
 }
 
 interface Props {
@@ -21,7 +23,9 @@ function toSlug(title: string) {
     <div class="book-card">
       <img
         class="book-cover"
-        src={`https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg`}
+        src={book.cover_url ?? (book.cover_id
+          ? `https://covers.openlibrary.org/b/id/${book.cover_id}-M.jpg`
+          : `https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg`)}
         alt={book.title}
         loading="lazy"
         onerror={`this.onerror=null;this.src='/covers/${toSlug(book.title)}.jpg'`}
