@@ -1,24 +1,39 @@
 ---
 import Base from '../layouts/Base.astro';
 import listening from '../data/listening.json';
+
+interface ListenItem {
+  title: string;
+  podcast: string;
+  url: string;
+  image: string;
+  note?: string;
+}
 ---
 <Base title="Listening" page="listening">
 
   <h2>Podcast episodes</h2>
-  <!-- To add an entry, add an object to src/data/listening.json:
-       { "title": "...", "podcast": "...", "url": "..." } -->
   {listening.length === 0
     ? <p class="empty-note">Nothing here yet — check back later.</p>
-    : (
-      <ul>
-        {listening.map((item: { title: string; podcast: string; url: string }) => (
-          <li>
-            <a href={item.url} target="_blank" rel="noopener">{item.title}</a>
-            {' — '}{item.podcast}
-          </li>
+    : <div class="media-list">
+        {(listening as ListenItem[]).map(item => (
+          <a class="media-card" href={item.url} target="_blank" rel="noopener">
+            {item.image && (
+              <img
+                class="media-thumb media-thumb--podcast"
+                src={item.image}
+                alt={item.title}
+                loading="lazy"
+              />
+            )}
+            <div class="media-info">
+              <p class="media-title">{item.title}</p>
+              <p class="media-sub">{item.podcast}</p>
+              {item.note && <p class="media-note">{item.note}</p>}
+            </div>
+          </a>
         ))}
-      </ul>
-    )
+      </div>
   }
 
 </Base>

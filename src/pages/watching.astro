@@ -1,24 +1,36 @@
 ---
 import Base from '../layouts/Base.astro';
 import watching from '../data/watching.json';
+
+interface WatchItem {
+  title: string;
+  channel: string;
+  video_id: string;
+  note?: string;
+}
 ---
 <Base title="Watching" page="watching">
 
   <h2>Videos &amp; talks</h2>
-  <!-- To add an entry, add an object to src/data/watching.json:
-       { "title": "...", "channel": "...", "url": "..." } -->
   {watching.length === 0
     ? <p class="empty-note">Nothing here yet — check back later.</p>
-    : (
-      <ul>
-        {watching.map((item: { title: string; channel: string; url: string }) => (
-          <li>
-            <a href={item.url} target="_blank" rel="noopener">{item.title}</a>
-            {' — '}{item.channel}
-          </li>
+    : <div class="media-list">
+        {(watching as WatchItem[]).map(item => (
+          <a class="media-card" href={`https://youtu.be/${item.video_id}`} target="_blank" rel="noopener">
+            <img
+              class="media-thumb media-thumb--video"
+              src={`https://img.youtube.com/vi/${item.video_id}/hqdefault.jpg`}
+              alt={item.title}
+              loading="lazy"
+            />
+            <div class="media-info">
+              <p class="media-title">{item.title}</p>
+              <p class="media-sub">{item.channel}</p>
+              {item.note && <p class="media-note">{item.note}</p>}
+            </div>
+          </a>
         ))}
-      </ul>
-    )
+      </div>
   }
 
 </Base>

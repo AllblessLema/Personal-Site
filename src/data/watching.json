@@ -1,15 +1,15 @@
 [
-  { "title": "Dwarkesh Goes Inside Jane Street's Latest AI Data Center", "channel": "Jane Street", "url": "https://youtu.be/8J-GUnfSqeE?si=uS64PwW9_wT399kR" },
-  { "title": "Chip design from the bottom up – Reiner Pope", "channel": "Dwarkesh Patel", "url": "https://youtu.be/oIk3R-sMX5o?si=pq6B0_JrLMMP8HrS" },
-  { "title": "How GPT, Claude, and Gemini are actually trained and served – Reiner Pope", "channel": "Dwarkesh Patel", "url": "https://youtu.be/xmkSf5IS-zw?si=JDXpIuZjcH6IHKGP" },
-  { "title": "The Special Memory Powering the AI Revolution", "channel": "Asianometry", "url": "https://youtu.be/yAw63F1W_Us?si=tvKDZuCR49CB8MNe" },
-  { "title": "How to Evaluate Efficient Deep Neural Network Approaches", "channel": "MIT EEMS Group", "url": "https://youtu.be/HTu7RokJsxc?si=a-XeI3Cq_BCxTTlm" },
-  { "title": "HC2024-S2: Specialized Processors", "channel": "Hot Chips", "url": "https://youtu.be/oeKRtNkx_Ek?si=Xq1ojxLb6DsEP1uM" },
-  { "title": "Stanford Seminar - Nvidia's H100 GPU", "channel": "Stanford EE", "url": "https://youtu.be/MC223HlPdK0?si=-SxAkfKlITFtUf8T" },
-  { "title": "The Thinking Game", "channel": "Google DeepMind", "url": "https://youtu.be/d95J8yzvjbQ?si=62Bzu__ZqlBJkEcb" },
-  { "title": "Deep Learning Hardware", "channel": "Orange County ACM Chapter", "url": "https://youtu.be/AGcv_PRKrPQ?si=JmwjlZLHfWOfNCjB" },
-  { "title": "How VLSI Revolutionized Semiconductor Design", "channel": "Asianometry", "url": "https://youtu.be/XgbxFVyKMMo?si=KLMs8_5Idq0bNSm0" },
-  { "title": "Designing Billions of Circuits with Code", "channel": "Asianometry", "url": "https://youtu.be/ihz2WY-E2C8?si=gNT989MrDbwan9M4" },
-  { "title": "The Growing Semiconductor Design Problem", "channel": "Asianometry", "url": "https://youtu.be/rtaaOdGuMCc?si=tOl7H1gsORzJbI53" },
-  { "title": "The Semiconductor Design Software Duopoly: Cadence & Synopsys", "channel": "Asianometry", "url": "https://youtu.be/AUm08ZUD63Q?si=vRFwgjAzTrxly3l7" }
+  { "title": "Dwarkesh Goes Inside Jane Street's Latest AI Data Center", "channel": "Jane Street", "video_id": "8J-GUnfSqeE" },
+  { "title": "Chip design from the bottom up – Reiner Pope", "channel": "Dwarkesh Patel", "video_id": "oIk3R-sMX5o" },
+  { "title": "How GPT, Claude, and Gemini are actually trained and served – Reiner Pope", "channel": "Dwarkesh Patel", "video_id": "xmkSf5IS-zw" },
+  { "title": "The Special Memory Powering the AI Revolution", "channel": "Asianometry", "video_id": "yAw63F1W_Us" },
+  { "title": "How to Evaluate Efficient Deep Neural Network Approaches", "channel": "MIT EEMS Group", "video_id": "HTu7RokJsxc" },
+  { "title": "HC2024-S2: Specialized Processors", "channel": "Hot Chips", "video_id": "oeKRtNkx_Ek" },
+  { "title": "Stanford Seminar - Nvidia's H100 GPU", "channel": "Stanford EE", "video_id": "MC223HlPdK0" },
+  { "title": "The Thinking Game", "channel": "Google DeepMind", "video_id": "d95J8yzvjbQ" },
+  { "title": "Deep Learning Hardware", "channel": "Orange County ACM Chapter", "video_id": "AGcv_PRKrPQ" },
+  { "title": "How VLSI Revolutionized Semiconductor Design", "channel": "Asianometry", "video_id": "XgbxFVyKMMo" },
+  { "title": "Designing Billions of Circuits with Code", "channel": "Asianometry", "video_id": "ihz2WY-E2C8" },
+  { "title": "The Growing Semiconductor Design Problem", "channel": "Asianometry", "video_id": "rtaaOdGuMCc" },
+  { "title": "The Semiconductor Design Software Duopoly: Cadence & Synopsys", "channel": "Asianometry", "video_id": "AUm08ZUD63Q" }
 ]
