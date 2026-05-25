@@ -2,5 +2,7 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://allblesslema.github.io',
-  base: '/Personal-Site',
+  base: '/Personal-Site/',
+  trailingSlash: 'always',
+  build: { format: 'directory' },
 });
