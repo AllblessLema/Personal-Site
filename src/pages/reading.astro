@@ -8,26 +8,33 @@ const papersBase = `${import.meta.env.BASE_URL}papers/`;
 ---
 <Base title="Reading" page="reading">
 
-  <h2>Currently reading</h2>
-  <BookGrid books={books.currently_reading} />
+  <div class="reading-layout">
 
-  <h2>Reading list</h2>
-  <BookGrid books={books.reading_list} />
+    <div class="books-col">
+      <h2>Currently reading</h2>
+      <BookGrid books={books.currently_reading} />
 
-  <h2>Want to read</h2>
-  <BookGrid books={books.want_to_read} />
+      <h2>Reading list</h2>
+      <BookGrid books={books.reading_list} />
 
-  <h2>Papers</h2>
-  <!-- To add a paper, add an entry to src/data/papers.json -->
-  <ul class="paper-list">
-    {papers.map(paper => (
-      <li>
-        <a href={`${papersBase}${paper.pdf}`} target="_blank" rel="noopener">
-          {paper.title}
-        </a>
-        {' — '}{paper.authors}{paper.year ? `, ${paper.year}` : ''}
-      </li>
-    ))}
-  </ul>
+      <h2>Want to read</h2>
+      <BookGrid books={books.want_to_read} />
+    </div>
+
+    <div class="papers-col">
+      <h2>Papers</h2>
+      <ul class="paper-list">
+        {papers.map(paper => (
+          <li>
+            <a href={`${papersBase}${paper.pdf}`} target="_blank" rel="noopener">
+              {paper.title}
+            </a>
+            {' — '}{paper.authors}{paper.year ? `, ${paper.year}` : ''}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+  </div>
 
 </Base>

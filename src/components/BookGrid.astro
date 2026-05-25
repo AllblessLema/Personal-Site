@@ -16,12 +16,21 @@ const base = import.meta.env.BASE_URL;
 function toSlug(title: string) {
   return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
+
+function resolveUrl(url: string) {
+  return url.startsWith('/covers/') ? `${base}${url.slice(1)}` : url;
+}
 ---
 
 <div class="book-grid">
   {books.map(book => {
-    const src = `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg?default=false`;
-    const fallback = book.cover_url ?? `${base}covers/${toSlug(book.title)}.jpg`;
+    const hasCoverUrl = !!book.cover_url;
+    const src      = hasCoverUrl
+      ? resolveUrl(book.cover_url!)
+      : `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg?default=false`;
+    const fallback = hasCoverUrl
+      ? `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg?default=false`
+      : `${base}covers/${toSlug(book.title)}.jpg`;
     return (
       <div class="book-card">
         <img
