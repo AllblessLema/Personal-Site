@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => (a.data.order ?? 99) - (b.data.order ?? 99)
+);
+---
+<Base title="Projects" page="projects">
+  <div>
+    {projects.map(project => (
+      <div class="project-item">
+        <h2>
+          <a href={`./${project.id}/index.html`} style="text-decoration: none;">
+            {project.data.title}
+          </a>
+        </h2>
+        <p>{project.data.summary}</p>
+        <a href={`./${project.id}/index.html`} class="read-more">Read more →</a>
+      </div>
+    ))}
+  </div>
+</Base>

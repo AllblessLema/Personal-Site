@@ -1,0 +1,19 @@
+[
+  { "title": "Gradient-Based Learning Applied to Document Recognition", "authors": "LeCun et al.", "year": 1998, "pdf": "lenet-1998.pdf" },
+  { "title": "A New Golden Age for Computer Architecture", "authors": "Hennessy & Patterson", "year": 2019, "pdf": "golden-age-2019.pdf" },
+  { "title": "The Memory Wall", "authors": "Wulf & McKee", "year": 1995, "pdf": "memory-wall-1995.pdf" },
+  { "title": "The Case for RISC", "authors": "Patterson & Ditzel", "year": 1980, "pdf": "case-for-risc-1980.pdf" },
+  { "title": "Pipeline Architecture", "authors": "Ramamoorthy & Li", "year": 1977, "pdf": "pipeline-architecture-1977.pdf" },
+  { "title": "The Alpha 21264 Microprocessor", "authors": "Kessler", "year": null, "pdf": "alpha-21264.pdf" },
+  { "title": "Intel Core Microarchitecture Whitepaper (Core 2 era)", "authors": "Intel", "year": null, "pdf": "intel-core-microarch.pdf" },
+  { "title": "Intel Technology Journal", "authors": "Intel", "year": null, "pdf": "intel-technology-journal.pdf" },
+  { "title": "Microarchitecture Evaluation with Floorplanning", "authors": "UCLA", "year": null, "pdf": "microarch-floorplan.pdf" },
+  { "title": "High Performance Cache Replacement Using Re-Reference Interval Prediction (RRIP)", "authors": "Jaleel et al.", "year": null, "pdf": "rrip.pdf" },
+  { "title": "Eyeriss: A Spatial Architecture for Energy-Efficient Dataflow for CNNs", "authors": "Chen et al.", "year": 2016, "pdf": "eyeriss-2016.pdf" },
+  { "title": "Efficient Processing of Deep Neural Networks: A Tutorial and Survey", "authors": "Sze et al.", "year": 2017, "pdf": "efficient-dnn.pdf" },
+  { "title": "In-Datacenter Performance Analysis of a Tensor Processing Unit", "authors": "Jouppi et al.", "year": 2017, "pdf": "tpu-isca-2017.pdf" },
+  { "title": "Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference", "authors": "Jacob et al.", "year": null, "pdf": "quantization-nn.pdf" },
+  { "title": "Dissecting the NVIDIA Volta GPU Architecture via Microbenchmarking", "authors": "Jia et al.", "year": null, "pdf": "volta-microbench.pdf" },
+  { "title": "NVIDIA Hopper Architecture In-Depth", "authors": "NVIDIA", "year": null, "pdf": "hopper.pdf" },
+  { "title": "NVIDIA RTX Blackwell GPU Architecture", "authors": "NVIDIA", "year": null, "pdf": "blackwell.pdf" }
+]

@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+import watching from '../data/watching.json';
+---
+<Base title="Watching" page="watching">
+
+  <h2>Videos &amp; talks</h2>
+  <!-- To add an entry, add an object to src/data/watching.json:
+       { "title": "...", "channel": "...", "url": "..." } -->
+  {watching.length === 0
+    ? <p class="empty-note">Nothing here yet — check back later.</p>
+    : (
+      <ul>
+        {watching.map((item: { title: string; channel: string; url: string }) => (
+          <li>
+            <a href={item.url} target="_blank" rel="noopener">{item.title}</a>
+            {' — '}{item.channel}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
+</Base>

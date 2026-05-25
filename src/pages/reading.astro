@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import BookGrid from '../components/BookGrid.astro';
+import books from '../data/books.json';
+import papers from '../data/papers.json';
+---
+<Base title="Reading" page="reading">
+
+  <h2>Currently reading</h2>
+  <BookGrid books={books.currently_reading} />
+
+  <h2>Reading list</h2>
+  <BookGrid books={books.reading_list} />
+
+  <h2>Want to read</h2>
+  <BookGrid books={books.want_to_read} />
+
+  <h2>Papers</h2>
+  <!-- To add a paper, add an entry to src/data/papers.json -->
+  <ul class="paper-list">
+    {papers.map(paper => (
+      <li>
+        <a href={`../papers/${paper.pdf}`} target="_blank" rel="noopener">
+          {paper.title}
+        </a>
+        {' — '}{paper.authors}{paper.year ? `, ${paper.year}` : ''}
+      </li>
+    ))}
+  </ul>
+
+</Base>

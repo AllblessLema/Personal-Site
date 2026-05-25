@@ -1,0 +1,33 @@
+---
+interface Book {
+  title: string;
+  author: string;
+  isbn: string;
+}
+
+interface Props {
+  books: Book[];
+}
+
+const { books } = Astro.props;
+
+function toSlug(title: string) {
+  return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+---
+
+<div class="book-grid">
+  {books.map(book => (
+    <div class="book-card">
+      <img
+        class="book-cover"
+        src={`https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg`}
+        alt={book.title}
+        loading="lazy"
+        onerror={`this.onerror=null;this.src='/covers/${toSlug(book.title)}.jpg'`}
+      />
+      <p class="book-title">{book.title}</p>
+      <p class="book-author">{book.author}</p>
+    </div>
+  ))}
+</div>

@@ -1,0 +1,31 @@
+{
+  "currently_reading": [
+    { "title": "The Idea Factory", "author": "Jon Gertner", "isbn": "9780143122791" }
+  ],
+  "reading_list": [
+    { "title": "Deep Work", "author": "Cal Newport", "isbn": "9781455586691" },
+    { "title": "Too Big to Fail", "author": "Andrew Ross Sorkin", "isbn": "9780143118244" },
+    { "title": "Trading at the Speed of Light", "author": "Donald MacKenzie", "isbn": "9780691211381" },
+    { "title": "The Big Short", "author": "Michael Lewis", "isbn": "9780393338829" },
+    { "title": "How the World Really Works", "author": "Vaclav Smil", "isbn": "9780593297063" },
+    { "title": "The Innovators", "author": "Walter Isaacson", "isbn": "9781476708706" },
+    { "title": "What It Takes", "author": "Stephen Schwarzman", "isbn": "9781501158070" },
+    { "title": "Liar's Poker", "author": "Michael Lewis", "isbn": "9780393246100" },
+    { "title": "Going Infinite", "author": "Michael Lewis", "isbn": "9780393881431" },
+    { "title": "Digital Minimalism", "author": "Cal Newport", "isbn": "9780525536512" },
+    { "title": "Principles", "author": "Ray Dalio", "isbn": "9781501124020" },
+    { "title": "The Obstacle Is the Way", "author": "Ryan Holiday", "isbn": "9781591846352" },
+    { "title": "The Man Who Solved the Market", "author": "Gregory Zuckerman", "isbn": "9780525559993" },
+    { "title": "Up Close and All In", "author": "John Mack", "isbn": "9781982166489" },
+    { "title": "Elon Musk", "author": "Walter Isaacson", "isbn": "9781982181284" },
+    { "title": "Zero to One", "author": "Peter Thiel", "isbn": "9780804139021" },
+    { "title": "Speed and Scale", "author": "John Doerr", "isbn": "9780593420492" },
+    { "title": "Steve Jobs", "author": "Walter Isaacson", "isbn": "9781451648539" },
+    { "title": "Tiger Woods", "author": "Jeff Benedict", "isbn": "9781476716893" },
+    { "title": "My Life as a Quant", "author": "Emanuel Derman", "isbn": "9780470192733" }
+  ],
+  "want_to_read": [
+    { "title": "Chip War", "author": "Chris Miller", "isbn": "9781982172008" },
+    { "title": "Skunk Works", "author": "Ben Rich", "isbn": "9780316743006" }
+  ]
+}
