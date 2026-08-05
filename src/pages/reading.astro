@@ -5,31 +5,16 @@ import books from '../data/books.json';
 ---
 <Base title="Reading" page="reading">
 
-  <div class="reading-layout">
+  <h2>Currently reading</h2>
+  <BookGrid books={books.currently_reading} />
 
-    <div class="books-col">
-      <h2>Currently reading</h2>
-      <BookGrid books={books.currently_reading} />
+  <h2>Reading list</h2>
+  <BookGrid books={books.reading_list} />
 
-      <h2>Reading list</h2>
-      <BookGrid books={books.reading_list} />
+  <h2>Want to read</h2>
+  <BookGrid books={books.want_to_read} />
 
-      <h2>Want to read</h2>
-      <BookGrid books={books.want_to_read} />
-    </div>
-
-    <div class="checklist-col">
-      <h2>Books to read 2026</h2>
-      <ul class="checklist">
-        {books.books_2026.map(title => (
-          <li>
-            <input type="checkbox" disabled />
-            <span>{title}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-
-  </div>
+  <h2>Books to read 2026</h2>
+  <BookGrid books={books.books_2026} />
 
 </Base>

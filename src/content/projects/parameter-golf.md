@@ -8,11 +8,48 @@ OpenAI's Model Craft Challenge: train the best language model that fits in a 16 
 
 The challenge is a form of L(N) optimization — minimize loss given a fixed parameter budget, unconstrained by data, compute steps, or architecture. The constraint forces choices most practitioners never encounter: aggressive quantization, non-standard architectures, and training setups tuned to the actual step count the hardware achieves.
 
-[Challenge repo](https://github.com/openai/parameter-golf)
+<div class="pg-stats">
+  <div class="pg-stat"><strong>16 MB</strong><span>Artifact cap</span></div>
+  <div class="pg-stat"><strong>10 min</strong><span>Train time</span></div>
+  <div class="pg-stat"><strong>8×H100</strong><span>Compute</span></div>
+  <div class="pg-stat"><strong>BPB</strong><span>FineWeb eval</span></div>
+</div>
+
+<div class="pg-links">
+  <a class="pg-link" href="https://github.com/LUIDevo/parameter-golf" target="_blank" rel="noopener">Our submission →</a>
+  <a class="pg-link pg-link--ghost" href="https://github.com/openai/parameter-golf" target="_blank" rel="noopener">Challenge repo →</a>
+</div>
+
+<div class="pg-diagram">
+  <div class="pg-diagram-title">The whole budget, one number</div>
+  <div class="pg-bytebar-track">
+    <div class="pg-bytebar-fill"></div>
+  </div>
+  <p class="pg-diagram-caption">Code bytes + compressed model bytes, combined, decimal 16,000,000 bytes flat — architecture, tokenizer, and weights all draw from the same budget.</p>
+</div>
 
 ## What we worked on
 
 **Quantization.** Explored INT6 and INT8 precision. The central tradeoff: lower bit width frees artifact space for more parameters, but only if rounding error doesn't eat the gain. Per-row scaling, passthrough tensors for precision-sensitive weights (the embedding matrix has a disproportionate quant gap relative to its size), and late-stage QAT all interact — the order matters and the right combination is empirical.
+
+<div class="pg-diagram">
+  <div class="pg-diagram-title">Precision vs. bit width</div>
+  <div class="pg-ladder">
+    <div class="pg-ladder-bar">
+      <div class="pg-ladder-fill" style="height: 100%;"></div>
+      <div class="pg-ladder-label"><strong>FP32</strong>32 bits/weight</div>
+    </div>
+    <div class="pg-ladder-bar">
+      <div class="pg-ladder-fill" style="height: 25%;"></div>
+      <div class="pg-ladder-label"><strong>INT8</strong>8 bits/weight</div>
+    </div>
+    <div class="pg-ladder-bar">
+      <div class="pg-ladder-fill" style="height: 18.75%;"></div>
+      <div class="pg-ladder-label"><strong>INT6</strong>6 bits/weight</div>
+    </div>
+  </div>
+  <p class="pg-diagram-caption">Bar heights scaled to relative bit width. Every step down buys artifact space for more parameters — until rounding error eats the gain.</p>
+</div>
 
 **Architecture search.** Depth vs. width under a fixed budget has no universal answer. Ran ablations on layer count, model dimension, and MLP expansion ratio. A deeper model runs fewer training steps in the same wallclock window — steps per second is a hidden constraint, and comparing architectures without accounting for throughput is a bad comparison.
 

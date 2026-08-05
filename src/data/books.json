@@ -28,14 +28,14 @@
     { "title": "Chip War", "author": "Chris Miller", "isbn": "9781982172008" }
   ],
   "books_2026": [
-    "The Prince",
-    "Meditations",
-    "The Great Gatsby",
-    "Adventures of Huckleberry Finn",
-    "East of Eden",
-    "Crime and Punishment",
-    "The Count of Monte Cristo",
-    "Lonesome Dove",
-    "The Road"
+    { "title": "The Prince", "author": "Niccolò Machiavelli", "isbn": "9780140449150", "cover_url": "https://covers.openlibrary.org/b/id/12726168-L.jpg" },
+    { "title": "Meditations", "author": "Marcus Aurelius", "isbn": "9780140449334", "cover_url": "https://covers.openlibrary.org/b/id/13202688-L.jpg" },
+    { "title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "isbn": "9780743273565", "cover_url": "https://covers.openlibrary.org/b/id/10590366-L.jpg" },
+    { "title": "Adventures of Huckleberry Finn", "author": "Mark Twain", "isbn": "9780451523730", "cover_url": "https://covers.openlibrary.org/b/id/8157718-L.jpg" },
+    { "title": "East of Eden", "author": "John Steinbeck", "isbn": "9780142004234", "cover_url": "https://covers.openlibrary.org/b/id/11386937-L.jpg" },
+    { "title": "Crime and Punishment", "author": "Fyodor Dostoevsky", "isbn": "9780679734505", "cover_url": "https://covers.openlibrary.org/b/id/9411873-L.jpg" },
+    { "title": "The Count of Monte Cristo", "author": "Alexandre Dumas", "isbn": "9780140449266", "cover_url": "https://covers.openlibrary.org/b/id/14566393-L.jpg" },
+    { "title": "Lonesome Dove", "author": "Larry McMurtry", "isbn": "9780671795894", "cover_url": "https://covers.openlibrary.org/b/id/8376548-L.jpg" },
+    { "title": "The Road", "author": "Cormac McCarthy", "isbn": "9780307387899", "cover_url": "https://covers.openlibrary.org/b/id/198120-L.jpg" }
   ]
 }

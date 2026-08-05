@@ -48,8 +48,8 @@ Upcoming milestones: M1 hardware bring-up → M2 single MAC unit → M3 8×8 sys
 
 ## Resources
 
-- Sze, Chen, Yang, Emer. [*Efficient Processing of Deep Neural Networks: A Tutorial and Survey.*](../../papers/efficient-dnn.pdf) Proceedings of the IEEE, 2017. — Dataflow taxonomy and data-movement-energy framing behind the architectural choices.
-- Chen, Krishna, Emer, Sze. [*Eyeriss: A Spatial Architecture for Energy-Efficient Dataflow for CNNs.*](../../papers/eyeriss-2016.pdf) IEEE JSSC, 2017. — Row-stationary dataflow in a production CNN accelerator; the contrast with weight-stationary informs the design choices here.
-- Jouppi et al. [*In-Datacenter Performance Analysis of a Tensor Processing Unit.*](../../papers/tpu-isca-2017.pdf) ISCA, 2017. — Google TPU v1; a much larger systolic array at industrial scale.
-- LeCun, Bottou, Bengio, Haffner. [*Gradient-Based Learning Applied to Document Recognition.*](../../papers/lenet-1998.pdf) Proceedings of the IEEE, 1998. — The original LeNet-5 paper.
+- Sze, Chen, Yang, Emer. [*Efficient Processing of Deep Neural Networks: A Tutorial and Survey.*](https://arxiv.org/abs/1703.09039) Proceedings of the IEEE, 2017. — Dataflow taxonomy and data-movement-energy framing behind the architectural choices.
+- Chen, Krishna, Emer, Sze. [*Eyeriss: A Spatial Architecture for Energy-Efficient Dataflow for CNNs.*](http://www.rle.mit.edu/eems/wp-content/uploads/2016/11/eyeriss_jssc_2017.pdf) IEEE JSSC, 2017. — Row-stationary dataflow in a production CNN accelerator; the contrast with weight-stationary informs the design choices here.
+- Jouppi et al. [*In-Datacenter Performance Analysis of a Tensor Processing Unit.*](https://arxiv.org/abs/1704.04760) ISCA, 2017. — Google TPU v1; a much larger systolic array at industrial scale.
+- LeCun, Bottou, Bengio, Haffner. [*Gradient-Based Learning Applied to Document Recognition.*](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf) Proceedings of the IEEE, 1998. — The original LeNet-5 paper.
 - Harris & Harris. *Digital Design and Computer Architecture,* 2nd ed. — Foundational SystemVerilog and digital design reference.
