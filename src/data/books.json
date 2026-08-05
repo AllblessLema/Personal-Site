@@ -25,7 +25,17 @@
     { "title": "My Life as a Quant", "author": "Emanuel Derman", "isbn": "9780470192733" }
   ],
   "want_to_read": [
-    { "title": "Chip War", "author": "Chris Miller", "isbn": "9781982172008" },
-    { "title": "Skunk Works", "author": "Ben Rich", "isbn": "9780316743006" }
+    { "title": "Chip War", "author": "Chris Miller", "isbn": "9781982172008" }
+  ],
+  "books_2026": [
+    "The Prince",
+    "Meditations",
+    "The Great Gatsby",
+    "Adventures of Huckleberry Finn",
+    "East of Eden",
+    "Crime and Punishment",
+    "The Count of Monte Cristo",
+    "Lonesome Dove",
+    "The Road"
   ]
 }

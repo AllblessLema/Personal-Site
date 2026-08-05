@@ -1,7 +1,7 @@
 ---
 interface Props {
   title: string;
-  page?: 'home' | 'reading' | 'watching' | 'listening' | 'projects';
+  page?: 'home' | 'reading' | 'projects';
 }
 
 const { title, page } = Astro.props;
@@ -24,8 +24,6 @@ const b = import.meta.env.BASE_URL;
         <nav>
           <a href={b} aria-current={page === 'home' ? 'page' : undefined}>Home</a>
           <a href={`${b}reading/`} aria-current={page === 'reading' ? 'page' : undefined}>Reading</a>
-          <a href={`${b}watching/`} aria-current={page === 'watching' ? 'page' : undefined}>Watching</a>
-          <a href={`${b}listening/`} aria-current={page === 'listening' ? 'page' : undefined}>Listening</a>
           <a href={`${b}projects/`} aria-current={page === 'projects' ? 'page' : undefined}>Projects</a>
         </nav>
       </div>
@@ -160,26 +158,6 @@ const b = import.meta.env.BASE_URL;
     margin-top: 0.1rem;
   }
 
-  /* Papers */
-  .paper-list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .paper-list li {
-    padding: 0.45rem 0;
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-
-  .paper-list li:last-child { border-bottom: none; }
-
-  .paper-list a {
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
   /* Reading two-column layout */
   .reading-layout {
     display: grid;
@@ -224,69 +202,22 @@ const b = import.meta.env.BASE_URL;
   .project-content h3 { margin-top: 2rem; }
   .project-content ul { margin-top: 0.25rem; }
 
-  /* Watching / Listening empty state */
-  .empty-note {
-    font-size: 0.9rem;
-    color: #999;
-    font-style: italic;
-    margin-top: 0.5rem;
+  /* Checklist (books to read) */
+  .checklist {
+    list-style: none;
+    padding: 0;
   }
 
-  /* Media cards (watching / listening) */
-  .media-list {
-    margin: 0.75rem 0 1.5rem;
-  }
-
-  .media-card {
+  .checklist li {
     display: flex;
-    gap: 1.25rem;
-    align-items: flex-start;
-    text-decoration: none;
-    color: inherit;
-    margin-bottom: 1.75rem;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.35rem 0;
+    font-size: 0.9rem;
   }
 
-  .media-thumb {
-    flex-shrink: 0;
-    object-fit: cover;
-    background: #f2f2f2;
-    display: block;
-  }
-
-  .media-thumb--video {
-    width: 200px;
-    aspect-ratio: 16 / 9;
-  }
-
-  .media-thumb--podcast {
-    width: 150px;
-    height: 150px;
-  }
-
-  .media-info {
-    flex: 1;
-    padding-top: 0.1rem;
-  }
-
-  .media-title {
-    font-size: 0.95rem;
-    font-weight: 600;
-    line-height: 1.35;
-    margin-bottom: 0.2rem;
-    color: #111;
-  }
-
-  .media-sub {
-    font-size: 0.8rem;
-    color: #888;
+  .checklist input[type="checkbox"] {
     margin: 0;
-  }
-
-  .media-note {
-    font-size: 0.8rem;
-    color: #555;
-    margin-top: 0.35rem;
-    margin-bottom: 0;
   }
 
   /* Responsive */
@@ -300,8 +231,5 @@ const b = import.meta.env.BASE_URL;
     nav a:first-child { margin-right: 1rem; }
     .book-grid { grid-template-columns: repeat(2, 1fr); }
     .books-col .book-grid { grid-template-columns: repeat(2, 1fr); }
-    .media-card { flex-direction: column; }
-    .media-thumb--video { width: 100%; }
-    .media-thumb--podcast { width: 100%; height: auto; aspect-ratio: 1 / 1; }
   }
 </style>
