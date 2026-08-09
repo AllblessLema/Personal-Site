@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" width="100%" height="auto" font-family="ui-monospace, 'Courier New', monospace">
+<title>Val BPB vs. iteration count, same architecture (smoke_003 vs smoke_004)</title>
+<desc>Same 25.45M-parameter architecture at 100 iterations scores 1.9706 BPB; at 500 iterations it scores 1.4391. Iteration count moved the score more than any architecture change tested.</desc>
+<line x1="46" y1="266.0" x2="400" y2="266.0" stroke="#e8e8e8" stroke-width="1"/>
+<text x="38" y="269.0" font-size="10" fill="#999" text-anchor="end">1.30</text>
+<line x1="46" y1="203.5" x2="400" y2="203.5" stroke="#e8e8e8" stroke-width="1"/>
+<text x="38" y="206.5" font-size="10" fill="#999" text-anchor="end">1.50</text>
+<line x1="46" y1="141.0" x2="400" y2="141.0" stroke="#e8e8e8" stroke-width="1"/>
+<text x="38" y="144.0" font-size="10" fill="#999" text-anchor="end">1.70</text>
+<line x1="46" y1="78.5" x2="400" y2="78.5" stroke="#e8e8e8" stroke-width="1"/>
+<text x="38" y="81.5" font-size="10" fill="#999" text-anchor="end">1.90</text>
+<line x1="46" y1="16.0" x2="400" y2="16.0" stroke="#e8e8e8" stroke-width="1"/>
+<text x="38" y="19.0" font-size="10" fill="#999" text-anchor="end">2.10</text>
+<line x1="110.4" y1="16" x2="110.4" y2="266" stroke="#e8e8e8" stroke-width="1"/>
+<text x="110.4" y="282" font-size="10" fill="#999" text-anchor="middle">100</text>
+<line x1="367.8" y1="16" x2="367.8" y2="266" stroke="#e8e8e8" stroke-width="1"/>
+<text x="367.8" y="282" font-size="10" fill="#999" text-anchor="middle">500</text>
+<text x="223.0" y="296" font-size="10" fill="#999" text-anchor="middle">iterations (12L / 544d, 1×H100)</text>
+<polyline points="110.4,56.5 367.8,222.5" fill="none" stroke="#4a6fa5" stroke-width="2"/>
+<circle cx="110.4" cy="56.5" r="3.2" fill="#4a6fa5"/>
+<text x="110.4" y="46.5" font-size="10.5" fill="#111" text-anchor="middle" font-weight="600">1.9706</text>
+<circle cx="367.8" cy="222.5" r="3.2" fill="#4a6fa5"/>
+<text x="367.8" y="212.5" font-size="10.5" fill="#111" text-anchor="middle" font-weight="600">1.4391</text>
+</svg>
