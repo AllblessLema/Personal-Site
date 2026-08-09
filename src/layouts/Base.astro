@@ -348,6 +348,11 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
     border-radius: 8px;
   }
 
+  .pg-hero--sm img {
+    width: 70%;
+    margin: 0 auto;
+  }
+
   .pg-chart {
     margin: 1.5rem 0;
     padding: 1rem 1.1rem;
@@ -372,108 +377,6 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
   .pg-hero figcaption code,
   .pg-chart figcaption code {
     font-size: 0.95em;
-  }
-
-  /* Animated wavefront diagram (lenet, weight-stationary array) — pure CSS, no JS */
-  .pgwf {
-    margin: 1.5rem 0;
-    padding: 1rem 1.1rem;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    background: #fafafa;
-  }
-
-  .pgwf-radio {
-    position: absolute;
-    width: 1px; height: 1px;
-    margin: -1px; padding: 0;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    white-space: nowrap;
-    border: 0;
-  }
-
-  .pgwf-stage svg { width: 100%; height: auto; display: block; }
-
-  .pgwf-frame { display: none; }
-  .pgwf-static { display: none; }
-
-  .pgwf-caption {
-    font-size: 0.8rem;
-    color: #555;
-    margin-top: 0.6rem;
-    min-height: 1.4em;
-  }
-
-  .pgwf-cap { display: none; }
-  .pgwf-cap-static { display: none; }
-
-  .pgwf-controls {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-top: 0.85rem;
-  }
-
-  .pgwf-btn {
-    font-family: ui-monospace, "Courier New", monospace;
-    font-size: 0.78rem;
-    padding: 0.3rem 0.65rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    color: #555;
-    cursor: pointer;
-    user-select: none;
-  }
-
-  .pgwf-btn:hover { border-color: #999; color: #111; }
-
-  .pgwf-note {
-    font-size: 0.78rem;
-    color: #888;
-    margin-top: 0.7rem;
-  }
-
-  /* wire each radio to its frame/caption/button */
-  #pgwf-0:checked ~ .pgwf-stage .pgwf-frame-0,
-  #pgwf-1:checked ~ .pgwf-stage .pgwf-frame-1,
-  #pgwf-2:checked ~ .pgwf-stage .pgwf-frame-2,
-  #pgwf-3:checked ~ .pgwf-stage .pgwf-frame-3,
-  #pgwf-4:checked ~ .pgwf-stage .pgwf-frame-4,
-  #pgwf-5:checked ~ .pgwf-stage .pgwf-frame-5,
-  #pgwf-6:checked ~ .pgwf-stage .pgwf-frame-6 {
-    display: inline;
-  }
-
-  #pgwf-0:checked ~ .pgwf-stage .pgwf-cap-0,
-  #pgwf-1:checked ~ .pgwf-stage .pgwf-cap-1,
-  #pgwf-2:checked ~ .pgwf-stage .pgwf-cap-2,
-  #pgwf-3:checked ~ .pgwf-stage .pgwf-cap-3,
-  #pgwf-4:checked ~ .pgwf-stage .pgwf-cap-4,
-  #pgwf-5:checked ~ .pgwf-stage .pgwf-cap-5,
-  #pgwf-6:checked ~ .pgwf-stage .pgwf-cap-6 {
-    display: inline;
-  }
-
-  #pgwf-0:checked ~ .pgwf-controls label[for="pgwf-0"],
-  #pgwf-1:checked ~ .pgwf-controls label[for="pgwf-1"],
-  #pgwf-2:checked ~ .pgwf-controls label[for="pgwf-2"],
-  #pgwf-3:checked ~ .pgwf-controls label[for="pgwf-3"],
-  #pgwf-4:checked ~ .pgwf-controls label[for="pgwf-4"],
-  #pgwf-5:checked ~ .pgwf-controls label[for="pgwf-5"],
-  #pgwf-6:checked ~ .pgwf-controls label[for="pgwf-6"] {
-    background: #4a6fa5;
-    border-color: #4a6fa5;
-    color: #fff;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .pgwf-radio, .pgwf-controls, .pgwf-frame, .pgwf-cap {
-      display: none !important;
-    }
-    .pgwf-static, .pgwf-cap-static {
-      display: inline !important;
-    }
   }
 
   .pg-iframe-wrap {
