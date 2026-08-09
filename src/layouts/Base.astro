@@ -2,12 +2,16 @@
 interface Props {
   title: string;
   page?: 'home' | 'reading' | 'projects';
+  description?: string;
 }
 
-const { title, page } = Astro.props;
-const fullTitle = page ? `${title} — Allbless Lema` : title;
+const DEFAULT_DESCRIPTION = "Allbless Lema — computer engineering student building hardware accelerators and ML systems from the ground up.";
+
+const { title, page, description = DEFAULT_DESCRIPTION } = Astro.props;
+const fullTitle = (page && title !== 'Allbless Lema') ? `${title} — Allbless Lema` : title;
 
 const b = import.meta.env.BASE_URL;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +19,14 @@ const b = import.meta.env.BASE_URL;
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
 </head>
 <body>
   <div class="wrapper">

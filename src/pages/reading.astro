@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import BookGrid from '../components/BookGrid.astro';
 import books from '../data/books.json';
 ---
-<Base title="Reading" page="reading">
+<Base title="Reading" page="reading" description="What Allbless Lema is currently reading and has read.">
 
   <h2>Currently reading</h2>
   <BookGrid books={books.currently_reading} />

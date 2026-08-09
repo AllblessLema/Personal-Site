@@ -7,7 +7,7 @@ const projects = (await getCollection('projects')).sort(
 );
 const projectBase = `${import.meta.env.BASE_URL.replace(/\/?$/, '/')}projects/`;
 ---
-<Base title="Projects" page="projects">
+<Base title="Projects" page="projects" description="Projects by Allbless Lema: a from-scratch RTL CNN accelerator and other hardware/ML work.">
   <div>
     {projects.map(project => (
       <div class="project-item">

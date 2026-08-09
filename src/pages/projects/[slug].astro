@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 ---
-<Base title={entry.data.title} page="projects">
+<Base title={entry.data.title} page="projects" description={entry.data.summary}>
   <div class="project-content">
     <h1>{entry.data.title}</h1>
     <Content />
