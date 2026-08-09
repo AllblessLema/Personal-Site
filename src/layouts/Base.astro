@@ -32,6 +32,7 @@ const b = import.meta.env.BASE_URL;
         <a href="https://github.com/AllblessLema" target="_blank" rel="noopener">GitHub</a>
         <!-- TODO: add Twitter link: <a href="https://twitter.com/..." target="_blank" rel="noopener">Twitter</a> -->
         <a href="https://substack.com/@allblesslema" target="_blank" rel="noopener">Substack</a>
+        <a href="https://www.linkedin.com/in/allbless-lema-1487092a5/" target="_blank" rel="noopener">LinkedIn</a>
         <!-- TODO: add email: <a href="mailto:...">Email</a> -->
       </div>
     </header>
@@ -112,14 +113,14 @@ const b = import.meta.env.BASE_URL;
   .social-row a:hover { color: #111; }
 
   /* Typography */
-  h1 { font-size: 1rem; font-weight: 600; margin-bottom: 0.6rem; }
-  h2 { font-size: 0.95rem; font-weight: 600; margin: 2rem 0 0.6rem; }
-  h3 { font-size: 0.9rem; font-weight: 600; margin: 1.75rem 0 0.5rem; }
-  h4 { font-size: 0.85rem; font-weight: 600; margin: 1.25rem 0 0.4rem; }
+  h1 { font-size: 1.7rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 1rem; }
+  h2 { font-size: 1.2rem; font-weight: 700; margin: 2.75rem 0 0.75rem; }
+  h3 { font-size: 1.02rem; font-weight: 600; margin: 1.9rem 0 0.5rem; }
+  h4 { font-size: 0.9rem; font-weight: 600; color: #444; margin: 1.25rem 0 0.4rem; }
 
-  p { margin-bottom: 0.75rem; }
+  p { margin-bottom: 0.75rem; max-width: 70ch; }
   p:last-child { margin-bottom: 0; }
-  ul { padding-left: 1.5rem; margin-bottom: 0.75rem; }
+  ul { padding-left: 1.5rem; margin-bottom: 0.75rem; max-width: 70ch; }
   li { margin-bottom: 0.3rem; }
   a { color: #111; }
   a:hover { opacity: 0.6; }
@@ -127,16 +128,29 @@ const b = import.meta.env.BASE_URL;
   em { font-style: italic; }
   code { font-family: ui-monospace, "Courier New", monospace; font-size: 0.9em; }
 
-  /* Book grid */
-  .book-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
+  /* Book list */
+  .book-list {
+    display: flex;
+    flex-direction: column;
     margin: 0.75rem 0 1.5rem;
   }
 
+  .book-row {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .book-list .book-row:last-child {
+    border-bottom: none;
+  }
+
   .book-cover {
-    width: 100%;
+    flex: 0 0 auto;
+    width: 110px;
+    height: auto;
     aspect-ratio: 2 / 3;
     object-fit: cover;
     background: #f2f2f2;
@@ -144,18 +158,21 @@ const b = import.meta.env.BASE_URL;
     display: block;
   }
 
+  .book-info {
+    min-width: 0;
+  }
+
   .book-title {
-    font-size: 0.77rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    margin-top: 0.4rem;
-    line-height: 1.3;
+    line-height: 1.35;
     color: #111;
   }
 
   .book-author {
-    font-size: 0.71rem;
+    font-size: 0.95rem;
     color: #888;
-    margin-top: 0.1rem;
+    margin-top: 0.3rem;
   }
 
   /* Projects index */
@@ -189,6 +206,33 @@ const b = import.meta.env.BASE_URL;
   .project-content h2 { margin-top: 2.5rem; }
   .project-content h3 { margin-top: 2rem; }
   .project-content ul { margin-top: 0.25rem; }
+
+  .pg-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444;
+    margin: -0.5rem 0 0.3rem;
+    max-width: 70ch;
+  }
+
+  .pg-subtitle a { text-decoration: underline; text-underline-offset: 2px; }
+
+  .pg-dateline {
+    font-size: 0.8rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 1.25rem;
+  }
+
+  .pg-callout {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #111;
+    max-width: 38ch;
+    margin: 1.25rem 0 1.75rem;
+  }
 
   /* Project stat tiles + repo links (parameter golf, etc.) */
   .pg-stats {
@@ -318,6 +362,108 @@ const b = import.meta.env.BASE_URL;
     font-size: 0.95em;
   }
 
+  /* Animated wavefront diagram (lenet, weight-stationary array) — pure CSS, no JS */
+  .pgwf {
+    margin: 1.5rem 0;
+    padding: 1rem 1.1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fafafa;
+  }
+
+  .pgwf-radio {
+    position: absolute;
+    width: 1px; height: 1px;
+    margin: -1px; padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .pgwf-stage svg { width: 100%; height: auto; display: block; }
+
+  .pgwf-frame { display: none; }
+  .pgwf-static { display: none; }
+
+  .pgwf-caption {
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: 0.6rem;
+    min-height: 1.4em;
+  }
+
+  .pgwf-cap { display: none; }
+  .pgwf-cap-static { display: none; }
+
+  .pgwf-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.85rem;
+  }
+
+  .pgwf-btn {
+    font-family: ui-monospace, "Courier New", monospace;
+    font-size: 0.78rem;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #555;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .pgwf-btn:hover { border-color: #999; color: #111; }
+
+  .pgwf-note {
+    font-size: 0.78rem;
+    color: #888;
+    margin-top: 0.7rem;
+  }
+
+  /* wire each radio to its frame/caption/button */
+  #pgwf-0:checked ~ .pgwf-stage .pgwf-frame-0,
+  #pgwf-1:checked ~ .pgwf-stage .pgwf-frame-1,
+  #pgwf-2:checked ~ .pgwf-stage .pgwf-frame-2,
+  #pgwf-3:checked ~ .pgwf-stage .pgwf-frame-3,
+  #pgwf-4:checked ~ .pgwf-stage .pgwf-frame-4,
+  #pgwf-5:checked ~ .pgwf-stage .pgwf-frame-5,
+  #pgwf-6:checked ~ .pgwf-stage .pgwf-frame-6 {
+    display: inline;
+  }
+
+  #pgwf-0:checked ~ .pgwf-stage .pgwf-cap-0,
+  #pgwf-1:checked ~ .pgwf-stage .pgwf-cap-1,
+  #pgwf-2:checked ~ .pgwf-stage .pgwf-cap-2,
+  #pgwf-3:checked ~ .pgwf-stage .pgwf-cap-3,
+  #pgwf-4:checked ~ .pgwf-stage .pgwf-cap-4,
+  #pgwf-5:checked ~ .pgwf-stage .pgwf-cap-5,
+  #pgwf-6:checked ~ .pgwf-stage .pgwf-cap-6 {
+    display: inline;
+  }
+
+  #pgwf-0:checked ~ .pgwf-controls label[for="pgwf-0"],
+  #pgwf-1:checked ~ .pgwf-controls label[for="pgwf-1"],
+  #pgwf-2:checked ~ .pgwf-controls label[for="pgwf-2"],
+  #pgwf-3:checked ~ .pgwf-controls label[for="pgwf-3"],
+  #pgwf-4:checked ~ .pgwf-controls label[for="pgwf-4"],
+  #pgwf-5:checked ~ .pgwf-controls label[for="pgwf-5"],
+  #pgwf-6:checked ~ .pgwf-controls label[for="pgwf-6"] {
+    background: #4a6fa5;
+    border-color: #4a6fa5;
+    color: #fff;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pgwf-radio, .pgwf-controls, .pgwf-frame, .pgwf-cap {
+      display: none !important;
+    }
+    .pgwf-static, .pgwf-cap-static {
+      display: inline !important;
+    }
+  }
+
   .pg-iframe-wrap {
     margin: 1.5rem 0;
     border: 1px solid #eee;
@@ -362,7 +508,8 @@ const b = import.meta.env.BASE_URL;
     .header-row { flex-direction: column; gap: 0.4rem; }
     nav a { margin-left: 0; margin-right: 1rem; }
     nav a:first-child { margin-right: 1rem; }
-    .book-grid { grid-template-columns: repeat(2, 1fr); }
+    .book-cover { width: 70px; }
+    .book-title { font-size: 1.05rem; }
     .pg-stat { flex-basis: 40%; }
     .pg-iframe-wrap iframe { height: 420px; }
   }

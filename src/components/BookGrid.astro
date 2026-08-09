@@ -22,27 +22,31 @@ function resolveUrl(url: string) {
 }
 ---
 
-<div class="book-grid">
+<div class="book-list">
   {books.map(book => {
     const hasCoverUrl = !!book.cover_url;
     const src      = hasCoverUrl
       ? resolveUrl(book.cover_url!)
-      : `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg?default=false`;
+      : `https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg?default=false`;
     const fallback = hasCoverUrl
-      ? `https://covers.openlibrary.org/b/isbn/${book.isbn}-L.jpg?default=false`
+      ? `https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg?default=false`
       : `${base}covers/${toSlug(book.title)}.jpg`;
     return (
-      <div class="book-card">
+      <div class="book-row">
         <img
           class="book-cover"
           src={src}
           data-fb={fallback}
           alt={book.title}
           loading="lazy"
+          width="110"
+          height="165"
           onerror={"if(!this.dataset.fell){this.dataset.fell=1;this.src=this.dataset.fb}else{this.onerror=null;this.style.visibility='hidden'}"}
         />
-        <p class="book-title">{book.title}</p>
-        <p class="book-author">{book.author}</p>
+        <div class="book-info">
+          <p class="book-title">{book.title}</p>
+          <p class="book-author">{book.author}</p>
+        </div>
       </div>
     );
   })}
