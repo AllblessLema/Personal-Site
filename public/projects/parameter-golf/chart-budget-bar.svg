@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 90" width="100%" height="auto" font-family="ui-monospace, 'Courier New', monospace">
-<title>16,000,000-byte submission budget, filled to 15,124,287 bytes</title>
-<desc>The 6-bit weight packing plus zlib fits a 21.78-million-parameter model, EMA weights, and code into 15,124,287 of the 16,000,000-byte cap in a 1000-iteration smoke test on one GPU.</desc>
-<rect x="0" y="8" width="640" height="34" rx="4" fill="none" stroke="#e8e8e8" stroke-width="1.5" stroke-dasharray="4,3"/>
-<rect x="0" y="8" width="605.0" height="34" rx="4" fill="#4a6fa5"/>
-<text x="0" y="60" font-size="11" fill="#111" font-weight="600">15,124,287 B used</text>
-<text x="640" y="60" font-size="11" fill="#999" text-anchor="end">16,000,000 B cap</text>
-</svg>
