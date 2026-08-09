@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 460" width="100%" height="auto" font-family="ui-monospace, 'Courier New', monospace">
+<title>Intended weight-stationary dataflow for the 8x8 PE array</title>
+<desc>This is the planned dataflow, not a built system: each PE would hold one weight resident while activations stream in from the left and partial sums accumulate downward. No RTL implementing this array exists yet.</desc>
+<rect x="90" y="60" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="108.0" y="82.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="130" y="60" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="148.0" y="82.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="170" y="60" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="188.0" y="82.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="210" y="60" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="228.0" y="82.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="250" y="60" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="268.0" y="82.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="290" y="60" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="308.0" y="82.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="330" y="60" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="348.0" y="82.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="370" y="60" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="388.0" y="82.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="90" y="100" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="108.0" y="122.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="130" y="100" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="148.0" y="122.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="170" y="100" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="188.0" y="122.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="210" y="100" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="228.0" y="122.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="250" y="100" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="268.0" y="122.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="290" y="100" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="308.0" y="122.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="330" y="100" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="348.0" y="122.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="370" y="100" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="388.0" y="122.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="90" y="140" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="108.0" y="162.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="130" y="140" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="148.0" y="162.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="170" y="140" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="188.0" y="162.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="210" y="140" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="228.0" y="162.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="250" y="140" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="268.0" y="162.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="290" y="140" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="308.0" y="162.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="330" y="140" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="348.0" y="162.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="370" y="140" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="388.0" y="162.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="90" y="180" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="108.0" y="202.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="130" y="180" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="148.0" y="202.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="170" y="180" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="188.0" y="202.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="210" y="180" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="228.0" y="202.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="250" y="180" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="268.0" y="202.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="290" y="180" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="308.0" y="202.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="330" y="180" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="348.0" y="202.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="370" y="180" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="388.0" y="202.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="90" y="220" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="108.0" y="242.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="130" y="220" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="148.0" y="242.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="170" y="220" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="188.0" y="242.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="210" y="220" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="228.0" y="242.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="250" y="220" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="268.0" y="242.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="290" y="220" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="308.0" y="242.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="330" y="220" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="348.0" y="242.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="370" y="220" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="388.0" y="242.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="90" y="260" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="108.0" y="282.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="130" y="260" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="148.0" y="282.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="170" y="260" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="188.0" y="282.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="210" y="260" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="228.0" y="282.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="250" y="260" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="268.0" y="282.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="290" y="260" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="308.0" y="282.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="330" y="260" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="348.0" y="282.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="370" y="260" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="388.0" y="282.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="90" y="300" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="108.0" y="322.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="130" y="300" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="148.0" y="322.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="170" y="300" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="188.0" y="322.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="210" y="300" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="228.0" y="322.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="250" y="300" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="268.0" y="322.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="290" y="300" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="308.0" y="322.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="330" y="300" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="348.0" y="322.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="370" y="300" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="388.0" y="322.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="90" y="340" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="108.0" y="362.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="130" y="340" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="148.0" y="362.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="170" y="340" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="188.0" y="362.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="210" y="340" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="228.0" y="362.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="250" y="340" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="268.0" y="362.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="290" y="340" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="308.0" y="362.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="330" y="340" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="348.0" y="362.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<rect x="370" y="340" width="36" height="36" rx="3" fill="#fafafa" stroke="#4a6fa5" stroke-width="1"/>
+<text x="388.0" y="362.0" font-size="10" fill="#4a6fa5" text-anchor="middle">W</text>
+<line x1="30" y1="78.0" x2="84" y2="78.0" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="30" y1="118.0" x2="84" y2="118.0" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="30" y1="158.0" x2="84" y2="158.0" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="30" y1="198.0" x2="84" y2="198.0" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="30" y1="238.0" x2="84" y2="238.0" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="30" y1="278.0" x2="84" y2="278.0" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="30" y1="318.0" x2="84" y2="318.0" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="30" y1="358.0" x2="84" y2="358.0" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<text x="30" y="46" font-size="10" fill="#111" text-anchor="start">activations in →</text>
+<line x1="108.0" y1="376" x2="108.0" y2="406" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="148.0" y1="376" x2="148.0" y2="406" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="188.0" y1="376" x2="188.0" y2="406" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="228.0" y1="376" x2="228.0" y2="406" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="268.0" y1="376" x2="268.0" y2="406" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="308.0" y1="376" x2="308.0" y2="406" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="348.0" y1="376" x2="348.0" y2="406" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<line x1="388.0" y1="376" x2="388.0" y2="406" stroke="#111" stroke-width="1.3" marker-end="url(#arrow)"/>
+<text x="250.0" y="424" font-size="10" fill="#111" text-anchor="middle">partial sums out ↓</text>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#111"/></marker></defs>
+<text x="280.0" y="24" font-size="12" fill="#111" text-anchor="middle" font-weight="600">Weight-stationary, 8x8 — planned, not implemented</text>
+</svg>
