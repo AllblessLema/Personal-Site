@@ -87,7 +87,7 @@ Real failures and real fixes, on RunPod:
 
 - `requirements.txt` ships a bare, unpinned `torch` — a real fragility point in an ephemeral-pod workflow, since whatever version RunPod's base image happens to carry becomes the version you get.
 - Louis moved attention from PyTorch's `scaled_dot_product_attention` to `flash_attn_func` directly, for speed.
-- That introduced a real compatibility problem: `torch._dynamo`'s DDP optimizer conflicted with `flash_attn` under distributed training. [This fix](https://github.com/LUIDevo/parameter-golf/commit/aec305f) — `torch._dynamo.config.optimize_ddp = False` — addresses it.
+- That introduced a real compatibility problem: `torch._dynamo`'s DDP optimizer conflicted with `flash_attn` under distributed training, fixed in [commit `aec305f`](https://github.com/LUIDevo/parameter-golf/commit/aec305f) by setting `torch._dynamo.config.optimize_ddp = False`.
 
 One lesson from the platform itself: a RunPod pod is ephemeral and a network volume isn't — anything not pushed to one or the other before the pod terminates is gone, which shapes how you structure every session.
 
